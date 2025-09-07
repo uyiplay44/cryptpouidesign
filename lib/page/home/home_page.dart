@@ -54,7 +54,6 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       ),
                     ],
                   ),
-
                   Column(
                     children: [
                       Icon(
@@ -80,7 +79,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                         style: BorderStyle.solid,
                       ),
                       color: Colors.orange[100],
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -99,7 +98,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                           child: Text(
                             "\$12,3789.05",
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 27,
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ),
@@ -117,7 +116,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                               vertical: 10,
                             ),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(8.5),
                               color: Colors.deepOrange,
                             ),
                             child: Text(
@@ -143,14 +142,253 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Gift Cards', style: TextStyle(fontSize: 15)),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          print('Killing it');
+                        });
+                      },
+                      child: Row(
+                        children: [
+                          Text(
+                            'See All',
+                            style: TextStyle(
+                              color: Colors.orange,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Icon(Icons.arrow_right_sharp, color: Colors.orange),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.asset(
+                              'lib/images/a.png',
+                              height: 60,
+                              width: 60,
+                            ),
+                          ),
+                          Text('Amazon'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.asset(
+                              'lib/images/m.png',
+                              height: 60,
+                              width: 60,
+                            ),
+                          ),
+                          Text('MasterCard'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(100),
+                              child: Image.asset(
+                                'lib/images/ap.png',
+                                height: 60,
+                                width: 60,
+                              ),
+                            ),
+                            Text('ITunes'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10.0,
+                  vertical: 20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(child: Text('Crypto')),
                     Row(
                       children: [
-                        Text(
-                          'See All',
-                          style: TextStyle(color: Colors.orange, fontSize: 15),
+                        Container(
+                          child: Text(
+                            'See All',
+                            style: TextStyle(color: Colors.orange),
+                          ),
                         ),
                         Icon(Icons.arrow_right_sharp, color: Colors.orange),
                       ],
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(50),
+                              child: Image.asset(
+                                'lib/images/bit.png',
+                                height: 50,
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(
+                                  width: 1,
+                                  color: Color.fromARGB(144, 92, 92, 92),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '-\$106.56',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(50),
+                              child: Image.asset(
+                                'lib/images/bit.png',
+                                height: 50,
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(
+                                  width: 1,
+                                  color: Color.fromARGB(144, 92, 92, 92),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '-\$106.56',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(50),
+                              child: Image.asset(
+                                'lib/images/bit.png',
+                                height: 50,
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(
+                                  width: 1,
+                                  color: Color.fromARGB(144, 92, 92, 92),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '-\$106.56',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),

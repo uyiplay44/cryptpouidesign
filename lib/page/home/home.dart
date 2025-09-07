@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void _index(int index) {
     setState(() {
       _selectedIndex = index;
-      print('Clicking');
+      print(_selectedIndex);
     });
   }
 
@@ -37,30 +37,31 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.deepOrange,
         currentIndex: _selectedIndex,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, size: 30),
+            icon: Icon(Icons.home, size: 20),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.store, size: 30),
+            icon: Icon(Icons.store, size: 20),
             label: 'Rates',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.traffic_rounded, size: 30),
+            icon: Icon(Icons.traffic_rounded, size: 20),
             label: 'Trade',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.track_changes, size: 30),
+            icon: Icon(Icons.track_changes, size: 20),
             label: 'Transactions',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 30),
+            icon: Icon(Icons.person, size: 20),
             label: 'Profile',
           ),
         ],
-        backgroundColor: Colors.blue[300],
+        backgroundColor: Colors.white,
         onTap: _index,
       ),
       body: SafeArea(
