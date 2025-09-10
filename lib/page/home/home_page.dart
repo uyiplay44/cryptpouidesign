@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seconproject/context/list_custom.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key});
@@ -263,132 +264,28 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 ),
               ),
               Expanded(
-                child: Column(
+                child: ListView(
+                  scrollDirection: Axis.vertical,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(50),
-                              child: Image.asset(
-                                'lib/images/bit.png',
-                                height: 50,
-                              ),
-                            ),
-                            Container(
-                              height: 50,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                  width: 1,
-                                  color: Color.fromARGB(144, 92, 92, 92),
-                                ),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  '-\$106.56',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    ItemScreen(
+                      balance: '-\$103.50',
+                      imagePath: 'lib/images/bit.png',
+                      amountPath: '\$66,145.80',
+                      titlePath: 'Bitcoin',
                     ),
-                    SizedBox(height: 20),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(50),
-                              child: Image.asset(
-                                'lib/images/bit.png',
-                                height: 50,
-                              ),
-                            ),
-                            Container(
-                              height: 50,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                  width: 1,
-                                  color: Color.fromARGB(144, 92, 92, 92),
-                                ),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  '-\$106.56',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    SizedBox(height: 5),
+                    ItemScreen(
+                      balance: '-\$35.78',
+                      imagePath: 'lib/images/eth.png',
+                      amountPath: '\$30,145.80',
+                      titlePath: 'Ethereum',
                     ),
-                    SizedBox(height: 20),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(50),
-                              child: Image.asset(
-                                'lib/images/bit.png',
-                                height: 50,
-                              ),
-                            ),
-                            Container(
-                              height: 50,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                  width: 1,
-                                  color: Color.fromARGB(144, 92, 92, 92),
-                                ),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  '-\$106.56',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    SizedBox(height: 5),
+                    ItemScreen(
+                      balance: '-\$230.50',
+                      imagePath: 'lib/images/tel.jpg',
+                      amountPath: '\$5,145.80',
+                      titlePath: 'Telsa',
                     ),
                   ],
                 ),
